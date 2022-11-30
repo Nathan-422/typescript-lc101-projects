@@ -4,8 +4,8 @@
 // Part 1: Declare (5) Variables With Type
 // let spacecraftName: string = "Determination";
 // let speedMph: number = 17500;
-// let kilometerToMars: number = 225000000;
-// let kilometersToTheMoon: number = 384400;
+let kilometerToMars: number = 225000000;
+let kilometersToTheMoon: number = 384400;
 // const milesPerKilometer: number = 0.0621;
 
 // Part 2: Print Days to Mars
@@ -56,8 +56,18 @@ class Spacecraft {
 
 // Create an instance of the class here:
 
+let shuttle: Spacecraft = new Spacecraft("Determinatimon", 17500);
+
 // Move your output statements from part 3 here. Update the template literals use the
 // instance of the class.
+console.log(
+  `It will take ${shuttle.name} ${Math.round(shuttle.getDaysToLocation(kilometerToMars) * 100) / 100} to reach mars`
+);
+console.log(
+  `It will take ${shuttle.name} ${
+    Math.round(shuttle.getDaysToLocation(kilometersToTheMoon) * 100) / 100
+  } to reach the moon`
+);
 
 // Part 5: Export and Import the SpaceLocation Class
 // Add the required import statement BEFORE the part 1 concent.
