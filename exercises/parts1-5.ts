@@ -1,6 +1,8 @@
 // URL for the instructions:
 // https://education.launchcode.org/intro-to-professional-web-dev/chapters/typescript/exercises.html
 
+import { SpaceLocation } from "./SpaceLocation";
+
 // Part 1: Declare (5) Variables With Type
 // let spacecraftName: string = "Determination";
 // let speedMph: number = 17500;
@@ -52,19 +54,27 @@ class Spacecraft {
     const daysToDestination = hoursToDestination / 24;
     return daysToDestination;
   }
+
+  printDaysToLocation(location: SpaceLocation) {
+    console.log(`${this.name} would take ${this.getDaysToLocation(location.kilometersAway)} days to get to ${location.name}.`);  }
 }
 
 // Create an instance of the class here:
 
+let mars: SpaceLocation = new SpaceLocation("Mars", kilometerToMars);
+let moon: SpaceLocation = new SpaceLocation("Moon", kilometersToTheMoon);
 let shuttle: Spacecraft = new Spacecraft("Determinatimon", 17500);
 
 // Move your output statements from part 3 here. Update the template literals use the
 // instance of the class.
-console.log(`It will take ${shuttle.name} ${shuttle.getDaysToLocation(kilometerToMars)} days to reach mars`);
-console.log(`It will take ${shuttle.name} ${shuttle.getDaysToLocation(kilometersToTheMoon)} days to reach the moon`);
+// console.log(`It will take ${shuttle.name} ${shuttle.getDaysToLocation(kilometerToMars)} days to reach mars`);
+// console.log(`It will take ${shuttle.name} ${shuttle.getDaysToLocation(kilometersToTheMoon)} days to reach the moon`);
 
 // Part 5: Export and Import the SpaceLocation Class
 // Add the required import statement BEFORE the part 1 concent.
+
+shuttle.printDaysToLocation(mars)
+shuttle.printDaysToLocation(moon)
 
 // Add the printDaysToLocation function to the Spacecraft class.
 
