@@ -61,12 +61,12 @@ let shuttle: Spacecraft = new Spacecraft("Determinatimon", 17500);
 // Move your output statements from part 3 here. Update the template literals use the
 // instance of the class.
 console.log(
-  `It will take ${shuttle.name} ${Math.round(shuttle.getDaysToLocation(kilometerToMars) * 100) / 100} to reach mars`
+  `It will take ${shuttle.name} ${Math.round(shuttle.getDaysToLocation(kilometerToMars) * 100) / 100} days to reach mars`
 );
 console.log(
   `It will take ${shuttle.name} ${
     Math.round(shuttle.getDaysToLocation(kilometersToTheMoon) * 100) / 100
-  } to reach the moon`
+  } days to reach the moon`
 );
 
 // Part 5: Export and Import the SpaceLocation Class
