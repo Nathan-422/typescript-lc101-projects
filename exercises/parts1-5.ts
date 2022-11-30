@@ -47,7 +47,7 @@ class Spacecraft {
   }
 
   getDaysToLocation(kilometersAway: number, speed = this.speedMph): number {
-    const milesToDestination = kilometersAway * 0.0621;
+    const milesToDestination = kilometersAway * 0.621;
     const hoursToDestination = milesToDestination / speed;
     const daysToDestination = hoursToDestination / 24;
     return daysToDestination;
@@ -60,14 +60,8 @@ let shuttle: Spacecraft = new Spacecraft("Determinatimon", 17500);
 
 // Move your output statements from part 3 here. Update the template literals use the
 // instance of the class.
-console.log(
-  `It will take ${shuttle.name} ${Math.round(shuttle.getDaysToLocation(kilometerToMars) * 100) / 100} days to reach mars`
-);
-console.log(
-  `It will take ${shuttle.name} ${
-    Math.round(shuttle.getDaysToLocation(kilometersToTheMoon) * 100) / 100
-  } days to reach the moon`
-);
+console.log(`It will take ${shuttle.name} ${shuttle.getDaysToLocation(kilometerToMars)} days to reach mars`);
+console.log(`It will take ${shuttle.name} ${shuttle.getDaysToLocation(kilometersToTheMoon)} days to reach the moon`);
 
 // Part 5: Export and Import the SpaceLocation Class
 // Add the required import statement BEFORE the part 1 concent.
