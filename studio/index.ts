@@ -1,9 +1,12 @@
 // Instructions are published in the online book. The URL is:
 // https://education.launchcode.org/intro-to-professional-web-dev/chapters/typescript/studio.html
 
-// TODO: 
-// * Code the Astronaut, Cargo, and Rocket classes in new files.
-// * Import the three classes into this file.
+/**
+ *  Authors: Alena, Kylene, Shareese, Yonnie
+ *  Class: lc_101
+ *  Section: Sept 2022
+ *  Instructor: Carrie Jones
+ */
 
 import { Astronaut } from './Astronaut';
 import { Cargo } from './Cargo';
